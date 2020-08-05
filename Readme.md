@@ -130,11 +130,11 @@ First [download the MacOSX10.9 SDK](https://github.com/phracker/MacOSX-SDKs/rele
 Once you have the macOS 10.9 SDKs ready, you will need to install [CMake](http://www.cmake.org/), which will assemble the Makefiles for your build and ensure that all necessary dependencies are installed. If you have brew, you can install CMake using `brew install cmake`.
 
 ### Build steps:
-1. Open a new Terminal window and set this repository as your working directory
+1. Open a new Terminal window and set this repository as your working directory. Delete the `/Build/` folder I've included in the repo.
 2. `mkdir Build`
 3. `cd Build`
 4. `cmake -DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/ ..`
 5. This is the annoying part... CMake still attaches most C++ system library headers to the macOS 10.15 SDK, so you will need find and replace all incorrect references. One way to do this is to open the repository in your favorite editor, search for all instances of `MacOSX10.15` in the `/Build/` directory, and replace them with `MacOSX10.9`. I also needed to search and replace `MacOSX10.11` with `MacOSX10.9`, but this was possibly because I wasn't using the 10.9 SDK from the start when figuring this out myself. In any case, if you have build errors due to a missing header file, you probably went wrong somewhere in this step. 
 4. `make`
 
-An application bundle will be created in `./Binaries`.
+After about 20 – 30min of compiling, an application bundle will be created in `./Binaries`.
