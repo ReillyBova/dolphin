@@ -1,12 +1,21 @@
-# Dolphin - A GameCube / Triforce / Wii Emulator
-
-[Homepage](https://dolphin-emu.org/) | [Project Site](https://github.com/dolphin-emu/dolphin) | [Forums](https://forums.dolphin-emu.org/) | [Wiki](https://wiki.dolphin-emu.org/) | [Issue Tracker](https://code.google.com/p/dolphin-emu/issues/list) | [Coding Style](https://github.com/dolphin-emu/dolphin/blob/master/Contributing.md) | [Transifex Page](https://www.transifex.com/projects/p/dolphin-emu/)
+# Custom Dolphin Emulator Build for Paper Mario on macOS
 
 Dolphin is an emulator for running GameCube, Triforce and Wii games on
 Windows/Linux/OS X systems and recent Android devices. It's licensed under
 the terms of the GNU General Public License, version 2 (GPLv2).
 
 Please read the [FAQ](https://dolphin-emu.org/docs/faq/) before using Dolphin.
+
+## The Bounding Box Issue — A Brief History
+Since around Dolphin build 4.0-5125, games that require emulation of the "Bounding Box" effect no longer run well on macOS systems. This is because Dolphin 4.0-5125 began using OpenGL 4.2+ features to emulate the effect, while macOS has been stuck on OpenGL 4.1 for over a decade (in fact, Apple has now officially deprecated OpenGL, and introduced Metal as its permanent replacement). As of Dolphin 5.0-12247, running a game that requires the "Bounding Box" effect on macOS and using OpenGL as the graphical backend will crash the game when the effect is used. If the Metal-integrated Vulkan graphical backend is used instead of OpenGL, the game will (probably) not crash, however the FPS and emulation performance will plummet below acceptable rates. This is not the case for Dolphin 4.0-5124, which is able to emulate the "Bounding Box" effect on macOS using OpenGL with acceptable --- though not always stellar --- performance.
+
+## Why This Matters
+One of the games hit especially hard by this issue is the beloved gem, *Paper Mario: The Thousand Year Door*, which uses the Bounding Box effect all over to simulate paper effects. Unfortunately, this game is among those that most deserving of emulation, as it looks stunning when scaled to HD resolution, rendered in widescreen, and run with HD textures.
+
+While it is possible to run *Paper Mario: The Thousand Year Door* (TTYD) on macOS using Dolphin development build 4.0-5124 and achieve 2K resolution and widescreen at typically-full performance (benchmarked using a 2016 15" MacBook Pro running macOS Catalina 10.15.5), **it is NOT possible to use HD Textures** as the community-developed HD Texture pack for TTYD uses a texture naming-scheme that was introduced in Dolphin 4.0-5224 — just a mere 100 minor dev-releases after the last Dolphin build that macOS can still run TTYD on.
+
+## What I've Done
+This repository began as a fork of Dolphin 4.0-5124. From there, I merged the changes from 
 
 ## System Requirements
 * OS
