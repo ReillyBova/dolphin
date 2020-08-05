@@ -42,7 +42,7 @@ set(SRCS	BoundingBox.cpp
 			VideoState.cpp
 			XFMemory.cpp
 			XFStructs.cpp)
-set(LIBS core png)
+set(LIBS core png xxhash)
 
 if(_M_X86)
 	set(SRCS ${SRCS}	TextureDecoder_x64.cpp)

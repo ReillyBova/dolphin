@@ -256,10 +256,6 @@ if(APPLE)
 	set(SYSROOT_PATH "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk")
 	if(EXISTS "${SYSROOT_PATH}/")
 		set(TARGET_SYSROOT ${SYSROOT_PATH})
-	elseif(EXISTS "${SYSROOT_LEGACY_PATH}/")
-		set(TARGET_SYSROOT ${SYSROOT_LEGACY_PATH})
-	endif()
-	if(${TARGET_SYSROOT})
 		set(TARGET_FLAGS "${TARGET_FLAGS} -isysroot ${TARGET_SYSROOT}")
 		set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-syslibroot,${TARGET_SYSROOT}")
 	endif()
@@ -530,6 +526,12 @@ else(ZLIB_FOUND)
 	add_subdirectory(Externals/zlib)
 	include_directories(Externals/zlib)
 endif(ZLIB_FOUND)
+
+find_package(BZip2)
+if(NOT XXHASH_FOUND)
+  message(STATUS "Using static xxhash from Externals")
+  add_subdirectory(Externals/xxhash)
+endif()
 
 if(NOT APPLE AND NOT ANDROID)
 	check_lib(LZO lzo2 lzo/lzo1x.h QUIET)
@@ -847,4 +849,3 @@ list(APPEND CPACK_SOURCE_IGNORE_FILES "${CMAKE_BINARY_DIR}")
 # CPack must be included after the CPACK_* variables are set in order for those
 # variables to take effect.
 Include(CPack)
-
