@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libaudiocommon.a CMakeFiles/audiocommon.dir/AudioCommon.cpp.o CMakeFiles/audiocommon.dir/DPL2Decoder.cpp.o CMakeFiles/audiocommon.dir/Mixer.cpp.o CMakeFiles/audiocommon.dir/WaveFile.cpp.o CMakeFiles/audiocommon.dir/NullSoundStream.cpp.o CMakeFiles/audiocommon.dir/OpenALStream.cpp.o CMakeFiles/audiocommon.dir/aldlist.cpp.o CMakeFiles/audiocommon.dir/CoreAudioSoundStream.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libaudiocommon.a

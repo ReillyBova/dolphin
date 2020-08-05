@@ -1,0 +1,117 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "C"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/aes.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/aes.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/aesni.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/aesni.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/arc4.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/arc4.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/asn1parse.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/asn1parse.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/asn1write.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/asn1write.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/base64.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/base64.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/bignum.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/bignum.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/blowfish.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/blowfish.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/camellia.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/camellia.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ccm.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ccm.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/certs.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/certs.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/cipher.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/cipher.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/cipher_wrap.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/cipher_wrap.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ctr_drbg.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ctr_drbg.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/debug.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/debug.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/des.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/des.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/dhm.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/dhm.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ecdh.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ecdh.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ecdsa.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ecdsa.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ecp.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ecp.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ecp_curves.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ecp_curves.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/entropy.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/entropy.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/entropy_poll.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/entropy_poll.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/error.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/error.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/gcm.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/gcm.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/havege.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/havege.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/hmac_drbg.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/hmac_drbg.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/md.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/md.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/md2.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/md2.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/md4.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/md4.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/md5.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/md5.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/md_wrap.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/md_wrap.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/memory_buffer_alloc.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/memory_buffer_alloc.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/net.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/net.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/oid.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/oid.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/padlock.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/padlock.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pbkdf2.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pbkdf2.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pem.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pem.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pk.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pk.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pk_wrap.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pk_wrap.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pkcs11.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pkcs11.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pkcs12.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pkcs12.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pkcs5.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pkcs5.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pkparse.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pkparse.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/pkwrite.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/pkwrite.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/platform.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/platform.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ripemd160.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ripemd160.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/rsa.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/rsa.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/sha1.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/sha1.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/sha256.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/sha256.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/sha512.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/sha512.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ssl_cache.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ssl_cache.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ssl_ciphersuites.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ssl_ciphersuites.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ssl_cli.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ssl_cli.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ssl_srv.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ssl_srv.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/ssl_tls.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/ssl_tls.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/threading.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/threading.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/timing.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/timing.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/version.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/version.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/version_features.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/version_features.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/x509.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/x509.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/x509_create.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/x509_create.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/x509_crl.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/x509_crl.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/x509_crt.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/x509_crt.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/x509_csr.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/x509_csr.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/x509write_crt.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/x509write_crt.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/x509write_csr.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/x509write_csr.c.o"
+  "/Users/rbova/GithubProjects/dolphin/Externals/polarssl/library/xtea.c" "/Users/rbova/GithubProjects/dolphin/Build/Externals/polarssl/library/CMakeFiles/polarssl.dir/xtea.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "Clang")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_C
+  "HAVE_ALSA=0"
+  "HAVE_AO=0"
+  "HAVE_BLUEZ=0"
+  "HAVE_OPENAL=1"
+  "HAVE_PORTAUDIO=0"
+  "HAVE_PULSEAUDIO=0"
+  "HAVE_SDL=0"
+  "SFML_STATIC"
+  "USER_DIR=\".dolphin-emu\""
+  "USE_UPNP"
+  "_ARCH_64=1"
+  "_FILE_OFFSET_BITS=64"
+  "_LARGEFILE_SOURCE"
+  "_M_X86=1"
+  "_M_X86_64=1"
+  )
+
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../Externals/SFML/include"
+  "../Externals/GL"
+  "/Library/Developer/CommandLineTools/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework"
+  "/Library/Developer/CommandLineTools/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenAL.framework/Headers"
+  "../Source/Core"
+  "../Externals/Bochs_disasm"
+  "../Externals/LZO"
+  "../Externals/libpng"
+  "../Externals"
+  "../Externals/miniupnpc/src"
+  "../Externals/polarssl/include"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

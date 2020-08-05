@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rbova/GithubProjects/dolphin/Externals/xxhash/xxhash.c
+stdlib.h
+-
+string.h
+-
+xxhash.h
+/Users/rbova/GithubProjects/dolphin/Externals/xxhash/xxhash.h
+stdint.h
+-
+stdint.h
+-
+
+/Users/rbova/GithubProjects/dolphin/Externals/xxhash/xxhash.h
+stddef.h
+-
+xxhash.c
+/Users/rbova/GithubProjects/dolphin/Externals/xxhash/xxhash.c
+
