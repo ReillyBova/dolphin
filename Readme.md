@@ -12,7 +12,7 @@ Since around Dolphin build 4.0-5125, games that require emulation of the "Boundi
 ## Why This Matters
 One game hit especially hard by this issue is the beloved gem, *Paper Mario: The Thousand Year Door*, which uses the Bounding Box effect all over to simulate paper effects. Unfortunately, this game is among those that most deserving of emulation, as it looks stunning when scaled to HD resolution, rendered in widescreen, and run with HD textures.
 
-While it is possible to run *Paper Mario: The Thousand Year Door* (TTYD) on macOS using Dolphin development build 4.0-5124 and achieve 2K resolution and widescreen at typically-full performance (benchmarked using a 2016 15" MacBook Pro running macOS Catalina 10.15.5), **it is NOT possible to use HD Textures** as the community-developed HD Texture pack for TTYD uses a texture naming-scheme that was [introduced in Dolphin 4.0-5234](https://github.com/dolphin-emu/dolphin/pull/1885) — just over 100 minor dev-releases after the last Dolphin build that macOS can still run TTYD on.
+While it is possible to run *Paper Mario: The Thousand Year Door* (TTYD) on macOS using Dolphin development build 4.0-5124 and achieve 2K resolution and widescreen at typically-full performance (benchmarked using a 2016 15" MacBook Pro running macOS 10.15.5 "Catalina"), **it is NOT possible to use HD Textures** as the community-developed HD Texture pack for TTYD uses a texture naming-scheme that was [introduced in Dolphin 4.0-5234](https://github.com/dolphin-emu/dolphin/pull/1885) — just over 100 minor dev-releases after the last Dolphin build that macOS can still run TTYD on.
 
 ## What I've Done
 This repository began as a fork of [Dolphin 4.0-5124](https://github.com/dolphin-emu/dolphin/pull/1899). From there, I merged the changes from [introduced in Dolphin 4.0-5234](https://github.com/dolphin-emu/dolphin/pull/1885) that introduce the new naming scheme for custom textures. Therefore, using this custom build of Dolphin, it is possible to experience "Bounding Box" dependent games like *Paper Mario: The Thousand Year Door* scaled to HD resolution, rendered in widescreen, AND run with HD textures.... all on macOS!
@@ -118,115 +118,23 @@ This is the one item I *really* wish I could fix, as it would allow for a much m
 
 It is possible to disable the dual-core mode by clicking on the TTYD ISO, selecting "properties", and toggling `Enable Dual Core`; however, unless you have a CPU with extremely powerful/high-clock-rate cores, the game may no longer emulate well enough to be playable. It certainly doesn't on my 2016 15" MacBook Pro running macOS Catalina with a 2.6 GHz Intel i7 CPU!
 
-## Building the App from Scratch on macOS Catalina 10.15
+## Building the App from Scratch on macOS 10.15 "Catalina"
 
-Dolphin 4.0-5124 requires a minimum version of macOS 10.11, which unfortunately
+Dolphin 4.0-5124 requires a minimum version of macOS 10.9 "Mavericks", which means that app compiles itself using the macOS 10.9 SDK exclusively. Unfortunately, this SDK was discontinued and is no longer available by default on macOS, so you will need to install it yourself.
 
+First [download the MacOSX10.9 SDK](https://github.com/phracker/MacOSX-SDKs/releases) and unzip the archive. You will need to copy the extracted folder, `MacOSX10.9.sdk`, into two locations:
 
-Dolphin requires [CMake](http://www.cmake.org/) for systems other than Windows. Many libraries are
-bundled with Dolphin and used if they're not installed on your system. CMake
-will inform you if a bundled library is used or if you need to install any
-missing packages yourself.
+1) `/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/`
+2) `/Library/Developer/CommandLineTools/SDKs/`
+
+Once you have the macOS 10.9 SDKs ready, you will need to install [CMake](http://www.cmake.org/), which will assemble the Makefiles for your build and ensure that all necessary dependencies are installed. If you have brew, you can install CMake using `brew install cmake`.
 
 ### Build steps:
-1. `mkdir Build`
-2. `cd Build`
-3. `cmake ..`
+1. Open a new Terminal window and set this repository as your working directory
+2. `mkdir Build`
+3. `cd Build`
+4. `cmake -DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/ ..`
+5. This is the annoying part... CMake still attaches most C++ system library headers to the macOS 10.15 SDK, so you will need find and replace all incorrect references. One way to do this is to open the repository in your favorite editor, search for all instances of `MacOSX10.15` in the `/Build/` directory, and replace them with `MacOSX10.9`. I also needed to search and replace `MacOSX10.11` with `MacOSX10.9`, but this was possibly because I wasn't using the 10.9 SDK from the start when figuring this out myself. In any case, if you have build errors due to a missing header file, you probably went wrong somewhere in this step. 
 4. `make`
 
-On OS X, an application bundle will be created in `./Binaries`.
-
-On Linux, it's strongly recommended to perform a global installation via `sudo make install`.
-
-## Uninstalling
-When Dolphin has been installed with the NSIS installer, you can uninstall
-Dolphin like any other Windows application.
-
-Linux users can run `cat install_manifest | xargs -d '\n' rm` from the build directory
-to uninstall Dolphin from their system.
-
-OS X users can simply delete Dolphin.app to uninstall it.
-
-Additionally, you'll want to remove the global user directory (see below to
-see where it's stored) if you don't plan to reinstall Dolphin.
-
-## Command line usage
-`Usage: Dolphin [-h] [-d] [-l] [-e <str>] [-b] [-V <str>] [-A <str>]`  
-
-* -h, --help Show this help message  
-* -d, --debugger Opens the debugger  
-* -l, --logger Opens the logger  
-* -e, --exec=<str> Loads the specified file (DOL,ELF,WAD,GCM,ISO)  
-* -b, --batch Exit Dolphin with emulator  
-* -V, --video_backend=<str> Specify a video backend  
-* -A, --audio_emulation=<str> Low level (LLE) or high level (HLE) audio  
-
-Available DSP emulation engines are HLE (High Level Emulation) and
-LLE (Low Level Emulation). HLE is fast but often less accurate while LLE is
-slow but close to perfect. Note that LLE has two submodes (Interpreter and
-Recompiler), which cannot be selected from the command line.
-
-Available video backends are "D3D" (only available on Windows Vista or higher),
-"OGL". There's also "Software Renderer", which uses the CPU for rendering and
-is intended for debugging purposes, only.
-
-## Sys Files
-* `totaldb.dsy`: Database of symbols (for devs only)
-* `GC/font_ansi.bin`: font dumps
-* `GC/font_sjis.bin`: font dumps
-* `GC/dsp_coef.bin`: DSP dumps
-* `GC/dsp_rom.bin`: DSP dumps
-
-The DSP dumps included with Dolphin have been written from scratch and do not
-contain any copyrighted material. They should work for most purposes, however
-some games implement copy protection by checksumming the dumps. You will need
-to dump the DSP files from a console and replace the default dumps if you want
-to fix those issues.
-
-## Folder structure
-These folders are installed read-only and should not be changed:
-
-* `GameSettings`: per-game default settings database
-* `GC`: DSP and font dumps
-* `Maps`: symbol tables (dev only)
-* `Shaders`: post-processing shaders
-* `Themes`: icon themes for GUI
-* `Resources`: icons that are theme-agnostic
-* `Wii`: default Wii NAND contents
-
-## User folder structure
-A number of user writeable directories are created for caching purposes or for
-allowing the user to edit their contents. On OS X and Linux these folders are
-stored in `~/Library/Application Support/Dolphin/` and `~/.dolphin-emu`
-respectively. On Windows the user directory is stored in the `My Documents`
-folder by default, but there are various way to override this behavior:
-
-* Creating a file called `portable.txt` next to the Dolphin executable will
-  store the user directory in a local directory called "User" next to the
-  Dolphin executable.
-* If the registry string value `LocalUserConfig` exists in
-  `HKEY_CURRENT_USER/Software/Dolphin Emulator` and has the value **1**,
-  Dolphin will always start in portable mode.
-* If the registry string value `UserConfigPath` exists in
-  `HKEY_CURRENT_USER/Software/Dolphin Emulator`, the user folders will be
-  stored in the directory given by that string. The other two methods will be
-  prioritized over this setting.
-
-
-List of user folders:
-
-* `Cache`: used to cache the ISO list
-* `Config`: configuration files
-* `Dump`: anything dumped from Dolphin
-* `GameConfig`: additional settings to be applied per-game
-* `GC`: memory cards and system BIOS
-* `Load`: custom textures
-* `Logs`: logs, if enabled
-* `ScreenShots`: screenshots taken via Dolphin
-* `StateSaves`: save states
-* `Wii`: Wii NAND contents
-
-## Custom textures
-Custom textures have to be placed in the user directory under
-`Load/Textures/[GameID]/`. You can find the Game ID by right-clicking a game
-in the ISO list and selecting "ISO Properties".
+An application bundle will be created in `./Binaries`.
